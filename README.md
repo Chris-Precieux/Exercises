@@ -1,5 +1,7 @@
 # Exercises
 
+
+```kotlin
 fun main() {
     val names: List<String> = listOf(
         "As Soon As Possible", 
@@ -34,3 +36,4 @@ fun main() {
     print(acronyms)
     	
 }
+```
