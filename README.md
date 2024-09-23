@@ -22,7 +22,7 @@ For example:
 
 
 ```kotlin
-// @Author -> Doctor Night
+// @Author -> Docteur Night
 
 fun main() {
     val names: List<String> = listOf(
@@ -77,7 +77,7 @@ For example:
 
 ```kotlin
 
-// @Author -> Doctor Night
+// @Author -> Docteur Night
 
 import kotlin.math.pow;
 
