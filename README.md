@@ -23,6 +23,7 @@ For example:
 
 ```kotlin
 // @Author -> Doctor Night
+
 fun main() {
     val names: List<String> = listOf(
         "As Soon As Possible", 
@@ -75,6 +76,8 @@ For example:
 * Write some code to determine whether a number is an Armstrong number.
 
 ```kotlin
+
+// @Author -> Doctor Night
 
 import kotlin.math.pow;
 
