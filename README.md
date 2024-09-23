@@ -22,7 +22,7 @@ For example:
 
 
 ```kotlin
-
+// @Author -> Doctor Night
 fun main() {
     val names: List<String> = listOf(
         "As Soon As Possible", 
