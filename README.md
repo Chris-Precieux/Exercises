@@ -22,6 +22,7 @@ For example:
 
 
 ```kotlin
+
 fun main() {
     val names: List<String> = listOf(
         "As Soon As Possible", 
@@ -55,6 +56,7 @@ fun main() {
     print(acronyms)
     	
 }
+
 ```
 
 
@@ -71,3 +73,47 @@ For example:
 * 153 is an Armstrong number, because: `153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153`
 * 154 is not an Armstrong number, because: `154 != 1^3 + 5^3 + 4^3 = 1 + 125 + 64 = 190`
 * Write some code to determine whether a number is an Armstrong number.
+
+```kotlin
+
+import kotlin.math.pow;
+
+fun Int.nbDigits(): Int { // -> extension function
+	return this.toString().length
+}
+
+
+fun Int.eachDigit(): List<Int> { // -> extension function
+    val listOfDigits: MutableList<Int> = mutableListOf();
+    
+    for(index in 0 until nbDigits()) {
+        listOfDigits.add(Character.getNumericValue(toString()[index]))
+    }
+    
+    return listOfDigits
+}
+
+
+fun main() {
+    
+    val	numbers: List<Int> = listOf(123, 39, 153, 90, 9)
+      
+    for(number in numbers) {
+        var sum = 0.0;
+        
+        for(digit in number.eachDigit()) {
+        	sum += digit.toDouble().pow(number.nbDigits())
+        }
+        
+        println(sum.toInt().also { 
+            when(it == number) {
+                true -> print("✅ ")
+                else -> print("❌ ")
+            }
+        	
+            
+        })
+    }
+}
+
+```
